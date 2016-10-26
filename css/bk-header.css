@@ -1,0 +1,333 @@
+/* -----------------------------
+ * 1.0 - Defalut Setting
+ ---------------------------- */
+/* 1.1 - Header wrapper */
+.bk-header {
+}
+.bk-header .header-outer {
+	display: table;
+	width: 100%;
+}
+.bk-header .header-left,
+.bk-header .header-right,
+.bk-header .header-center {
+	display: table-cell;
+	float: none;
+}
+.bk-header .header-left > *,
+.bk-header .header-right > *,
+.bk-header .header-center > * {
+	display: inline-block;
+	vertical-align: middle;
+}
+.bk-header .header-left {
+	text-align: left;
+}
+.bk-header .header-center {
+	text-align: center;
+}
+.bk-header .header-right {
+	text-align: right;
+}
+.bk-header .header-full {
+	width: 100%;
+}
+
+/* 1.2 - Navigation Desktops */
+.bk-navigation ul {
+	list-style: none;
+	padding-left: 0;
+	margin-bottom: 0;
+}
+.bk-navigation a {
+	text-decoration: none;
+	display: table;
+	padding: 4px 8px;
+	-webkit-transition: all 0.3s;
+	   -moz-transition: all 0.3s;
+	     -o-transition: all 0.3s;
+	        transition: all 0.3s;
+}
+.bk-navigation .menu-item-has-children {
+	position: relative;
+}
+.bk-navigation .menu-item-has-children > a {
+	display: inline-block;
+	padding-right: 5px;
+}
+.bk-navigation .menu-item-has-children .icon {
+	display: inline-block;
+	padding: 4px 8px 4px 2px;
+	cursor: pointer;
+}
+/* menu level1 */
+.bk-navigation > ul > li {
+	display: inline-block;
+	vertical-align: middle;
+}
+.bk-navigation > ul > li:first-child > a {
+	padding-left: 0;
+}
+.bk-navigation > ul > li:last-child > a {
+	padding-right: 0;
+}
+/* menu level2 */
+.bk-navigation .sub-menu {
+	position: absolute;
+	z-index: 5;
+	left: 0;
+	min-width: 85px;
+	text-align: left;
+	max-height: 0;
+	overflow: hidden;
+	-webkit-transition: all 0.3s;
+	   -moz-transition: all 0.3s;
+	     -o-transition: all 0.3s;
+	        transition: all 0.3s;
+}
+.bk-navigation .sub-menu li {
+	padding: 5px 10px;
+}
+.bk-navigation > ul > li:last-child .sub-menu {
+	left: none;
+	right: 0;
+}
+/* hover to open */
+.bk-navigation .menu-item-has-children:hover .sub-menu {
+	max-height: 999px;
+}
+.bk-navigation .sub-menu > li {
+	width: 100%;
+}
+.bk-navigation .sub-menu > li > a {
+	display: table;
+	width: 100%;
+}
+
+/* 1.3 - Navigation Mobile */
+.bk-navigation-mobile {
+	position: fixed;
+	width: 100%;
+	max-width: 350px;
+	height: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    background-color: #fff;
+    overflow-y: auto;
+}
+
+.bk-navigation-mobile > * {
+	position: relative;
+	z-index: 2;
+}
+
+.bk-navigation-mobile > .trigger-close-nav {
+	position: absolute;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+	background-color: transparent;
+}
+
+.bk-navigation-mobile .btn-close-nav-mobile {
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+.btn-close-nav-mobile {
+	text-align: center;
+}
+.btn-close-nav-mobile .icon {
+	margin-right: 5px;
+}
+
+.bk-navigation-mobile ul {
+	list-style: none;
+	padding-left: 0;
+	margin-bottom: 0;
+}
+.bk-navigation-mobile li {
+	-webkit-transition: all 0.3s;
+	   -moz-transition: all 0.3s;
+	     -o-transition: all 0.3s;
+	        transition: all 0.3s;
+}
+
+.bk-navigation-mobile a {
+	text-decoration: none;
+	display: table;
+	width: 100%;
+	padding: 8px 15px;
+	-webkit-transition: all 0.3s;
+	   -moz-transition: all 0.3s;
+	     -o-transition: all 0.3s;
+	        transition: all 0.3s;
+}
+.bk-navigation-mobile .menu-item-has-children {
+	position: relative;
+	overflow: hidden;
+	zoom: 1;
+}
+.bk-navigation-mobile .menu-item-has-children a {
+	display: table-cell;
+	padding-right: 0;
+	width: 10000px;
+	overflow: hidden;
+	zoom: 1;
+}
+.bk-navigation-mobile .menu-item-has-children .icon {
+	display: table-cell;
+	padding: 8px 15px;
+	cursor: pointer;
+}
+/* level2 */
+.bk-navigation-mobile .sub-menu {
+	max-height: 0;
+	overflow: hidden;
+	-webkit-transition: all 0.3s;
+	   -moz-transition: all 0.3s;
+	     -o-transition: all 0.3s;
+	        transition: all 0.3s;
+}
+.bk-navigation-mobile .open .sub-menu {
+	max-height: 999px;
+}
+
+.bk-effect-open {
+	position: relative;
+    z-index: 2;
+    background-color: #fff;
+    -webkit-transition: all 0.3s;
+	   -moz-transition: all 0.3s;
+	     -o-transition: all 0.3s;
+	        transition: all 0.3s;
+}
+.bk-effect-open.bk-header {
+	z-index: 3;
+}
+
+@media all and (max-width: 991px) {
+	.bk-effect-open.open {
+		-webkit-transform: translateX(-350px);
+	        -ms-transform: translateX(-350px);
+	            transform: translateX(-350px);
+	}
+}
+
+/* 1.4 - Burger */
+.bk-header .header-burger {
+	display: inline-block;
+	text-decoration: none;
+	-webkit-transition: all 0.3s;
+	   -moz-transition: all 0.3s;
+	     -o-transition: all 0.3s;
+	        transition: all 0.3s;
+}
+.bk-header .header-burger .icon {
+	margin-right: 5px;
+}
+
+/* Responsive */
+@media all and (min-width: 992px) {
+	.bk-navigation-mobile,
+	.bk-header .header-burger {
+		display: none;
+	}
+}
+@media all and (max-width: 991px) {
+	.bk-header .bk-navigation {
+		display: none;
+	}
+}
+
+/* 1.5 - Logo */
+.bk-header .header-logo {
+	max-height: 90px;
+}
+
+
+
+
+/* -----------------------------
+ * 2.0 - Style
+ ---------------------------- */
+/* 2.1 - Left Right */
+.bk-header-left-right {
+	
+}
+
+/* 2.2 - Left Center Right */
+.bk-header-left-center-right .header-left,
+.bk-header-left-center-right .header-center,
+.bk-header-left-center-right .header-right {
+	width: 33.33%;
+}
+
+
+
+
+/* -----------------------------
+ * 3.0 - Skin
+ ---------------------------- */
+/* 3.1 - Background */
+/* Header background */
+.bk-header {
+	background-color: #3ac3e0;
+}
+/* Sub menu background */
+.bk-navigation .sub-menu {
+	background-color: #3BAAC8;
+}
+/* Navigation Mobile background */
+.bk-navigation-mobile {
+	background-color: #3ac3e0;
+}
+.bk-navigation-mobile .sub-menu {
+	background-color: #3BAAC8;
+}
+
+/* 3.2 - Link color */
+.bk-navigation a:link,
+.bk-navigation a:visited,
+.bk-navigation-mobile a:link,
+.bk-navigation-mobile a:visited,
+.bk-header .header-burger:link,
+.bk-header .header-burger:visited,
+.bk-navigation .icon,
+.bk-navigation-mobile .icon {
+	color: #000;
+}
+.bk-navigation a:hover,
+.bk-navigation a:active,
+.bk-navigation-mobile a:hover,
+.bk-navigation-mobile a:active,
+.bk-header .header-burger:hover,
+.bk-header .header-burger:active,
+.bk-navigation .icon:hover,
+.bk-navigation-mobile .icon:hover {
+	color: #000;
+}
+
+/* 3.3 - Link background color when hover */
+.bk-navigation .sub-menu li:hover {
+	background-color: #3ac3e0;
+}
+.bk-navigation-mobile li:hover,
+.bk-navigation-mobile .btn-close-nav-mobile:hover {
+	background-color: #fff;
+}
+
+/* Style burger */
+.bk-header .header-burger {
+	border: 1px solid #000;
+	padding: 5px 10px;
+	border-radius: 2px;
+}
+.bk-header .header-burger:hover {
+	background-color: #fff;
+}
+
+
+
+
+
